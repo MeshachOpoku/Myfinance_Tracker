@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html><head>
+    <title>Myfinance Tracker</title>
+</head>
+<meta name=""/>
+  <body>
+   <h1>Myfinance Tracker:</h1><hr>
+   <p><i>We keep track of your finances  <input type="radio" selected> <br><br></i></p>
+   <img src="pic.jpeg" width="200px" height="200px" alto="nice pic">
+ <table> 
+     
+     <tr><td>
+          <label>Enter Income</label>  
+         <input type="number"  id="income"     placeholder="Enter income">  
+       </td></tr>
+
+     <tr><td>  
+         <label>Enter Expenses</label>  
+   <input type="number" id="expenses"placeholder="Enter expenses"><br>
+     </tr></td>
+     <tr><td> 
+       
+    </tr></td>
+    
+ <tr><td> <br><button width="1700px"onclick="balance()">Check balance:</button><img src=10543.jpg height="2px" width="2px""></button><br>
+     </td> 
+    </tr>
+     <tr><td> 
+        <div id="result">
+            
+        </div>
+       
+    </tr></td>
+    
+  </table>
+ <script>
+
+;
+     balance=()=>{
+        varb=document.getElementById("result") ;
+        
+ income=document.getElementById("income").value
+         
+expenses=document.getElementById("expenses").value; 
+if((income==""||income==null)&&(expenses==""||expenses==null))
+{
+   varb.innerHTML="<p  style=background-color:yellowcolor:blue>"+0+"</p>"
+    
+    
+}
+else { varb.innerHTML="<i><div style=background-color:yellow;color:blue>"+"Current Balance:"+(parseInt(income)-parseInt(expenses)).toString()+"<br><button onclick=del()>Delete</button></div></i>"
+
+
+ }
+
+
+ 
+     }
+
+
+
+      
+     del=()=>{
+    //deleting displayed message
+    varb=document.getElementById("result").innerHTML="";
+}
+
+
+ </script>
+  </body>  
+</html>
